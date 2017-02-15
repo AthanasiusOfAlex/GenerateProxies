@@ -214,7 +214,7 @@ fileprivate func makeEnvironmentCommand(proxyType: ProxyType,
 
         } else {
             
-            return "export \(prefix)_\(suffix)=\"\(exceptionsList.joined(separator: ","))\""
+            return "export \(prefix)_\(suffix)=\(exceptionsList.joined(separator: ","))"
 
         }
         
@@ -222,7 +222,7 @@ fileprivate func makeEnvironmentCommand(proxyType: ProxyType,
         
         if isEnabled {
             
-            return "export \(prefix)_\(suffix)=\"\(address):\(port)\""
+            return "export \(prefix)_\(suffix)=\(address):\(port)"
             
         } else {
             
